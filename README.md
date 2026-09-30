@@ -28,6 +28,8 @@ This repository explores ways to make those in-game tasks more efficient and int
 | --- | --- |
 | `infinite_loop()` | Repeats the cactus planting and matrix-sorting workflow. |
 | `harvest_energy_loop()` | Repeatedly runs the parallel sunflower setup. |
+| `harvest_pumpkin_loop()` | Repeatedly runs the parallel pumpkin setup. |
+| `harvest_carrot_loop()` | Repeatedly runs the parallel carrot setup. |
 | `parallel_loop(size)` | Repeatedly runs the parallel grass setup over the requested field size. |
 | `maze_loop(size)` | Starts the repeated single-maze sequence. |
 | `maze_loop_parallel(size)` | Starts one maze with multiple exploring drones. |

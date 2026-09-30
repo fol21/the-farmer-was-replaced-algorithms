@@ -27,6 +27,14 @@ def harvest_energy_loop():
 	while True:
 		single_entity_parallel_setup(Entities.Sunflower, size, -1)
 
+def harvest_pumpkin_loop():
+	while True:
+		single_entity_parallel_setup(Entities.Pumpkin, size, -1)
+
+def harvest_carrot_loop():
+	while True:
+		single_entity_parallel_setup(Entities.Carrot, size, -1)
+
 def parallel_loop(size):
 	single_entity_parallel_setup(Entities.Grass, size, -1)
 
@@ -46,7 +54,9 @@ def maze_grid_loop(size):
 if __name__ == "__main__":
 	#infinite_loop()
 	#harvest_energy_loop()
-	snake_loop()
+	#harvest_pumpkin_loop()
+	harvest_carrot_loop()
+	#snake_loop()
 	#maze_loop_parallel(8)
 	#maze_grid_loop(4)
 	#parallel_loop(size)
