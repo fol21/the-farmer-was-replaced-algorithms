@@ -116,7 +116,7 @@ def plant_or_fallback(entity, do_harvest=True):
 
 def plant_power_grid(size=(12, 12)):
 	def exec(x, y, args):
-		if get_water() < 1:
+		if get_water() < 1 and num_items(Items.Water) > 0:
 			use_item(Items.Water)
 		if can_harvest():
 			harvest()
@@ -274,7 +274,7 @@ def clear_land_parallel(size=None):
 	vertical_route_parallel(clear_land_exec, size)
 
 def plant_cactus_exec(x, y, args):
-	if get_water() < 1:
+	if get_water() < 1 and num_items(Items.Water) > 0:
 		use_item(Items.Water)
 	if can_harvest():
 		harvest()

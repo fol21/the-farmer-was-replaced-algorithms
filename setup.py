@@ -4,7 +4,7 @@ from compose import plant_cactus_parallel, plant_or_fallback, sort_matrix, sort_
 def grass_50_tree_50_setup():
 	size = get_world_size(), get_world_size()
 	def exec(x, y, args):
-		if get_water() < 1:
+		if get_water() < 1 and num_items(Items.Water) > 0:
 			use_item(Items.Water)
 		if can_harvest():
 			harvest()
@@ -22,7 +22,7 @@ def grass_50_tree_50_setup():
 def entity_50_tree_50_setup(entity, powergrid_size=-1):
 	size = get_world_size(), get_world_size()
 	def exec(x, y, args):
-		if get_water() < 1:
+		if get_water() < 1 and num_items(Items.Water) > 0:
 			use_item(Items.Water)
 		if can_harvest():
 			harvest()
@@ -45,7 +45,7 @@ def entity_50_tree_50_setup(entity, powergrid_size=-1):
 def pumpkin_50_entity_50_setup(entity):
 	size = get_world_size(), get_world_size()
 	def exec(x, y, args):
-		if get_water() < 1:
+		if get_water() < 1 and num_items(Items.Water) > 0:
 			use_item(Items.Water)
 		if can_harvest():
 			harvest()
@@ -61,7 +61,7 @@ def pumpkin_50_entity_50_setup(entity):
 	vertical_route(size, exec)
 
 def plant_trees_exec(x, y, args):
-	if get_water() < 1:
+	if get_water() < 1 and num_items(Items.Water) > 0:
 		use_item(Items.Water)
 	if can_harvest():
 		harvest()
@@ -86,7 +86,7 @@ def plant_trees_parallel_setup(size=(get_world_size(), get_world_size()), powerg
 def single_entity_exec(x, y, args):
 	if args and args["fertilizer"]:
 		use_item(Items.Fertilizer)
-	if not (args and args["fertilizer"]) and get_water() < 1:
+	if not (args and args["fertilizer"]) and get_water() < 1 and num_items(Items.Water) > 0:
 		use_item(Items.Water)
 	if can_harvest():
 		harvest()
